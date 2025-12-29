@@ -1,0 +1,7 @@
+
+body{margin:0;font-family:sans-serif;background:#111;color:#eee}
+header,footer{background:#000;padding:8px}
+#startup{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+background:#000;font-size:3em;animation:fade 1.2s forwards}
+@keyframes fade{to{opacity:0;pointer-events:none}}
+#settings{position:fixed;top:10%;left:10%;right:10%;background:#222;padding:10px}
