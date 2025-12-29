@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BOS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/themes.css">
+<link rel="stylesheet" href="styles/effects.css">
+</head>
+<body>
+<div id="startup">BOS</div>
+
+<header>
+<input id="search" placeholder="Search...">
+<button id="newTab">+</button>
+<button id="openSettings">⚙</button>
+</header>
+
+<main id="tabs"></main>
+
+<div id="settings" hidden>
+<h2>Settings</h2>
+<label>
+Mode:
+<select id="mode">
+<option value="easy">Easy</option>
+<option value="monster">Monster</option>
+</select>
+</label>
+
+<label>
+AI:
+<select id="ai">
+<option value="ddg">DuckDuckGo</option>
+<option value="ollama">Local Ollama</option>
+</select>
+</label>
+
+<label>
+Tracking prevention
+<input type="checkbox" id="tracking" checked>
+</label>
+
+<label>
+Theme color
+<input type="color" id="themeColor" value="#44aaff">
+</label>
+
+<button id="export">Export settings</button>
+<input type="file" id="import">
+<button id="closeSettings">Close</button>
+</div>
+
+<footer>
+<button id="coffee">☕ Support</button>
+</footer>
+
+<script src="scripts/startup.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/tabs.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/history.js"></script>
+<script src="scripts/shortcuts.js"></script>
+<script src="scripts/themes.js"></script>
+<script src="scripts/ai-ddg.js"></script>
+<script src="scripts/ai-ollama.js"></script>
+<script src="scripts/privacy.js"></script>
+<script>
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
+</script>
+</body>
+</html>
