@@ -1,0 +1,1 @@
+window.searchOllama=async q=>alert('Local Ollama call')

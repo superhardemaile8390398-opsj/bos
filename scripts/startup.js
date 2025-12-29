@@ -1,0 +1,1 @@
+setTimeout(()=>startup.remove(),1200);
